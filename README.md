@@ -93,10 +93,12 @@ You can guide LLMs to generate a mind map in JSON format by giving them a prompt
 
 ```
 Create a mind map in JSON format for the topic "YOUR_TOPIC" using the language "YOUR_LANGUAGE".
-Each node should have a html formated label that begins with an emoji and a description.
-The mind map should contain at least 25 nodes with about 3 sentences of description and edges with labels
-as a hierarchic tree with at least 3 levels where every node is connected with a parent node.
-Generate only the json data, no explanation. Use the following JSON structure as a reference:
+Each node must have an HTML formatted label that begins with an emoji and includes a description.
+The mind map should consist of at least 25 nodes, each with approximately 3 sentences of description.
+Ensure that the edges have labels, forming a hierarchical tree structure with at least 3 levels.
+It is crucial that every node is directly connected to a parent node, creating a cohesive and interconnected network.
+Generate only the JSON data, with no additional explanations.
+Use the following JSON structure as a reference:
 {
   "nodes": [
     {
