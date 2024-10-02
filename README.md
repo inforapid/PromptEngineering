@@ -1,4 +1,4 @@
-# Generating MindMaps with LLMs like ChatGPT for KnowledgeBase Builder import
+# Generating MindMaps with ChatGPT for KnowledgeBase Builder
 
 ## Overview
 
