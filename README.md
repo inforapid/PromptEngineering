@@ -145,7 +145,7 @@ The generated JSON can then be copied to the clipboard or saved as a `.json` fil
 
 Once the JSON mind map has been generated and copied or saved, you can import it into **KnowledgeBase Builder** by following these steps:
 
-1. **Open KnowledgeBase Builder**.
+1. Open KnowledgeBase Builder.
 2. Navigate to the menu: `KnowledgeBase -> Import / Export -> Import JSON Data`.
 3. Select the JSON file you have created or paste the JSON data into the import dialog and click **Import**.
 
