@@ -96,7 +96,8 @@ Create a mind map in JSON format for the topic "YOUR_TOPIC" using the language "
 Each node must have an HTML formatted label that begins with an emoji and includes a description.
 The mind map should consist of at least 25 nodes, each with approximately 3 sentences of description.
 Ensure that the edges have labels, forming a hierarchical tree structure with at least 3 levels.
-It is crucial that every node is directly connected to a parent node, creating a cohesive and interconnected network.
+It is crucial that every node is directly connected to a parent node, resulting in a deeply nested and interconnected network,
+where elements are not simply under a single root, but rather distributed across multiple levels of hierarchy.
 Generate only the JSON data, with no additional explanations.
 Use the following JSON structure as a reference:
 {
