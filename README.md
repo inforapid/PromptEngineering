@@ -87,27 +87,65 @@ Below is a simplified example of how the JSON should be structured:
 
 ### How to Generate JSON Using ChatGPT
 
-You can prompt an LLM, such as ChatGPT, to generate JSON files like the example above by asking it to create a mind map with specific nodes, edges, and categories. For example, you can use the following prompt:
+You can guide LLMs to generate a mind map in JSON format by giving them a prompt that includes a sample JSON structure, illustrating how the data should be structured.
 
-**Prompt Example:**
+#### Example LLM Prompt:
+
 ```
-Create a JSON file for a mind map with the following nodes:
-1. Idea 1 (💡) with a description of "Description 1"
-2. Idea 2 (🔍) with a description of "Description 2"
-Also, create a connection between these ideas named "Connection 1" with the description "This is a connection between Idea 1 and Idea 2."
+Create a mind map in JSON format for the topic "YOUR_TOPIC" using the language "YOUR_LANGUAGE". Each node should have a html formated label that begins with an emoji and a description. The mind map should contain at least 25 nodes with about 3 sentences of description and edges with labels as a hierarchic tree with at least 3 levels where every node is connected with a parent node. Generate only the json data, no explanation. Use the following JSON structure as a reference:
+{
+  "nodes": [
+    {
+      "id": 1,
+      "label": "<html><span style=\"display:inline-table\"><span style=\"display:table-cell;vertical-align:middle;font-size:3em;\">💡</span><span style=\"display:table-cell;vertical-align:middle\"> Name 1</span></span></html>",
+      "description": "Description 1",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "label": "<html><span style=\"display:inline-table\"><span style=\"display:table-cell;vertical-align:middle;font-size:3em;\">🔍</span><span style=\"display:table-cell;vertical-align:middle\"> Name 2</span></span></html>",
+      "description": "Description 2",
+      "categoryId": 2
+    }
+  ],
+  "edges": [
+    {
+      "id": 1,
+      "source": 1,
+      "target": 2,
+      "label": "Line 1",
+      "description": "Line Description 1",
+      "categoryId": 1
+    }
+  ],
+  "nodeCategories": [
+    {
+      "id": 1,
+      "name": "Category1"
+    }
+  ],
+  "edgeCategories": [
+    {
+      "id": 1,
+      "name": "Line category"
+    }
+  ]
+}
 ```
 
-The generated JSON can then be copied and saved as a `.json` file.
+Replace `"YOUR_TOPIC"` with the subject of your mind map, and `"YOUR_LANGUAGE"` with the language in which you'd like the mind map to be generated. The prompt instructs the LLM to output the structure in the correct JSON format.
 
-## Importing the JSON File into KnowledgeBase Builder
+The generated JSON can then be copied to the clipboard or saved as a `.json` file.
 
-Once the JSON file has been generated and saved, you can import it into **KnowledgeBase Builder** by following these steps:
+## Importing the JSON Mind Map into KnowledgeBase Builder
+
+Once the JSON mind map has been generated and copied or saved, you can import it into **KnowledgeBase Builder** by following these steps:
 
 1. **Open KnowledgeBase Builder**.
 2. Navigate to the menu: `KnowledgeBase -> Import / Export -> Import JSON Data`.
-3. Select the JSON file you have created and click **Import**.
+3. Select the JSON file you have created or paste the JSON data into the import dialog and click **Import**.
 
-The mind map will now appear in the **KnowledgeBase Builder** interface with the nodes and connections defined in the JSON file.
+The mind map will now appear in the **KnowledgeBase Builder** with the nodes and connections defined in the JSON file.
 
 ## Conclusion
 
